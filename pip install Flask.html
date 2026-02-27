@@ -1,0 +1,31 @@
+pip install Flask
+
+portfolio_web/
+│
+├── app.py           (Kode Python)
+└── templates/
+    └── index.html   (Tampilan HTML)
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Portofolio {{ nama }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        .project { border: 1px solid #ddd; padding: 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Halo, Saya {{ nama }}</h1>
+    <h2>{{ judul }}</h2>
+    <p>{{ tentang }}</p>
+    
+    <h3>Proyek Saya:</h3>
+    {% for p in proyek %}
+        <div class="project">
+            <strong>{{ p.nama }}</strong>: {{ p.deskripsi }}
+        </div>
+    {% endfor %}
+</body>
+</html>

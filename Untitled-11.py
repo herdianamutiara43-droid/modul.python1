@@ -1,2 +1,30 @@
-1  for x in ["apel", "jeruk", "pisang"]:
-2      print(x)
+class car:
+  def _init(self, brand, model):
+    self.brand = brand
+    self.model = model
+        
+  def move(self):
+    print("drive!")
+
+class Boat:
+  def _init_(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Sail!")
+
+class Plane:
+  def _init_(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Fly!")
+
+car1 = car("Ford", "Mustang")      #Create a Car class
+boat1 = Boat("Ibiza" "Touring 20") #Create a Boat class
+plane1 = Plane("Beoing", "747")    #Create a Plane class
+
+for x in (car1, boat1, plane1):
+  x.move()

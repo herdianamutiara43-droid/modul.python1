@@ -1,25 +1,29 @@
-# program Menghitung Luas dan keLiLing Bangun Datar 
-# python
+import turtle
 
-print("--- Program Hitung persegi ---")
-sisi = float(input("Masukkan sisi persegi: "))
-luas_p = sisi * sisi
-keliling_p = 4 * sisi
-print(f"Luas: {luas_p}, keliling: {keliling_p}\n")
+# mengatur layar
+screen =  turtle.screen()
+screen.title("Gambar Bangun Datar - python Turtle")
+screen.bgcolor("white")
 
-print("--- Program Hitung Persegi Panjang ---")
-panjang = float(input("Masukkan panjang: "))
-lebar = float(input("Masukkan lebar: "))
-luas_pp = panjang * lebar
-keliling_pp = 2 * (panjang + lebar)
-print(f"Luas: {luas_pp}, keliling: {keliling_pp}\n")
+# Membuat objek turtle
+t = turtle.Turtle()
+t.speed(3)
+t.pensize(2)
 
-print("--- Program Hitung Trapesium ---")
-a = float(input("Masukkan sisi atas: "))
-b = float(input("Masukkan sisi bawah: "))
-t = float(input("Masukkan tinggi: "))
-sisi_miring1 = float(input("Masukkan sisi miring 1: "))
-sisi_miring2 = float(input("Masukkan sisi miring 2: "))
-luas_t = 0.5 * (a + b) * t
-keliling_t = a + b + sisi_miring1 + sisi_miring2
-print(f" luas: {luas_t}, keliling: {keliling_t} ")
+# --- Fungsi untuk Menggambar Bangun datar ---
+
+# 1. persegi panjang 
+def draw_rectangle(x, y, width, height, color):
+t.penup()
+t.goto(x, y)
+t.pendown()
+t.color(color)
+t.begin_fill()
+for _ in range(2)
+    t.forward(width)
+    t.left(90)
+    t.forward(height)
+    t.left(90)
+t.end_fill()
+
+#
